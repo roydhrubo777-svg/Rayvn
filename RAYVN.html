@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RAVYN Esports — Player Registration</title>
+  <style>
+    :root {
+      /* RAVYN brand — Purple & Gold (matches logo) */
+      --bg:#1c0f3a;            /* deep royal purple */
+      --card:#120a2a;          /* darker panel purple */
+      --muted:#b9b4cf;         /* soft lavender gray */
+      --text:#f3f4ff;          /* near-white */
+      --brand:#f5b301;         /* signature gold */
+      --accent:#ffd34d;        /* light gold accent */
+      --danger:#ff5c73;        /* leave as-is */
+      --border:#2a174f;        /* subtle purple border */
+      --chip:#1a1240;          /* chip/bg elements */
+      --btn:#20104a;           /* button surface */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;color:var(--text);background:radial-gradient(1200px 1000px at 12% -10%,rgba(245,179,1,.15),transparent 60%),var(--bg);font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Noto Sans", Arial} 
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:32px 16px}
+    header{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+    header h1{margin:0;font-size:28px;letter-spacing:.6px}
+    header .tag{font-size:14px;color:var(--muted)}
+    .lead{font-size:14px;color:var(--muted)}
+    .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+    @media (max-width:900px){.grid-2{grid-template-columns:1fr}}.hero{border:1px solid var(--border);background:linear-gradient(180deg,rgba(245,179,1,.10),transparent 55%),var(--card);padding:22px;border-radius:20px}
+.hero h2{margin:8px 0 0;font-size:18px;color:#fff}
+.slogan{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+.card{border:1px solid var(--border);background:var(--card);border-radius:20px;padding:18px}
+.pill{display:inline-flex;gap:6px;align-items:center;background:var(--chip);border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:12px;color:#cbd5e1}
+
+.feature-row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 6px}
+.feature{flex:1 1 180px;border:1px solid var(--border);background:var(--chip);border-radius:12px;padding:10px 12px;font-size:13px;color:#d6dcef}
+
+.kicker{font-weight:600;margin:8px 0 4px}
+
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(124,92,255,.5),transparent);margin:14px 0}
+
+.socials{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--btn);padding:10px 12px;border-radius:12px;font-size:14px}
+
+form .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+form label{display:block;font-size:13px;color:#c6d0de;margin-bottom:6px}
+input,select,textarea{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:#0e1217;color:#e9eef5}
+textarea{min-height:100px;resize:vertical}
+.row-2{grid-column:1 / -1}
+.hint{font-size:12px;color:var(--muted);margin-top:4px}
+.note{border:1px dashed var(--border);background:#0b1016;border-radius:12px;padding:8px 10px;margin:6px 0}
+.preview{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pholder{border:1px dashed var(--border);background:#0b1016;border-radius:12px;min-height:140px;display:flex;align-items:center;justify-content:center;color:var(--muted);text-align:center;padding:8px}
+.progress{height:8px;background:#0f141a;border-radius:999px;border:1px solid var(--border);overflow:hidden}
+.bar{height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--accent))}
+.actions{display:flex;gap:10px}
+.primary{background:var(--brand);border:none;color:white}
+.ghost{background:transparent;border:1px solid var(--border);color:#d0d8e6}
+button, .ghost{cursor:pointer;border-radius:12px;padding:10px 14px}
+footer{color:var(--muted);font-size:13px;margin-top:16px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <!-- Kept the heading and removed the old "Set Custom Logo" option per request -->
+      <div>
+        <div class="pill"># RAVYN ESPORTS</div>
+        <h1>RAVYN Esports</h1>
+        <div class="tag">"Go take it and own your ground."</div>
+      </div>
+    </header><div class="grid-2">
+  <!-- Left: Overview -->
+  <section class="card hero" aria-labelledby="why-title">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+      <h2 id="why-title">Why join RAVYN?</h2>
+      <div class="pill">Nepal • 2025</div>
+    </div>
+
+    <div class="feature-row" aria-label="Key features">
+      <div class="feature">Tiered Trials</div>
+      <div class="feature">Role-based Scrims</div>
+      <div class="feature">Coach Feedback</div>
+      <div class="feature">Content Spotlight</div>
+    </div>
+
+    <p class="lead">We're building a disciplined, positive, and competitive roster across Nepal. Earn your slot through clean comms, sharp aim, and clutch decision-making.</p>
+
+    <div class="divider"></div>
+
+    <div>
+      <p class="kicker">🔊 <strong>Crystal comms:</strong> Callouts, trading, and tempo control are everything. Show us leadership and teamwork.</p>
+      <p class="kicker">🎯 <strong>Pro discipline:</strong> No toxicity, no excuses — only growth. We value consistency over highlights.</p>
+      <p class="kicker">🎬 <strong>Show your best:</strong> Submit a tight 2–5 min role-focused gameplay clip. Quality matters.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3 style="margin:0 0 10px">📢 Connect with us</h3>
+    <div class="socials">
+      <a class="btn" href="https://www.instagram.com/r4nesports?igsh=dmJzNmNoemVoOGQz" target="_blank" rel="noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5m5 5a5 5 0 1 0 0 10a5 5 0 0 0 0-10m6.5-.25a1.25 1.25 0 1 0 0 2.5a1.25 1.25 0 0 0 0-2.5Z"/></svg>
+        Instagram
+      </a>
+      <a class="btn" href="https://discord.gg/SrPEXz6g" target="_blank" rel="noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4.5A17.2 17.2 0 0 0 16.7 3a12.9 12.9 0 0 0-1.5 3.1a10.7 10.7 0 0 0-3.4 0A12.9 12.9 0 0 0 10.3 3A17.2 17.2 0 0 0 7 4.5C2.6 11.7 4.1 18.2 4.1 18.2A12.2 12.2 0 0 0 9 21a9.6 9.6 0 0 0 .8-1.6c-2-.6-2.7-2-2.7-2c.2.1.6.3 1 .4c.4.1.8.2 1.2.3c.8.2 1.6.3 2.4.3s1.6-.1 2.4-.3c.4-.1.8-.2 1.2-.3c.5-.1.8-.3 1-.4c0 0-.7 1.4-2.7 2c.2.6.6 1.2.8 1.6c5-.6 6.5-4.1 6.5-4.1S21.4 11.7 20 4.5M9.5 14.3c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3s1.3.6 1.3 1.3s-.6 1.3-1.3 1.3m5 0c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3s1.3.6 1.3 1.3"/></svg>
+        Discord
+      </a>
+      <a class="btn" href="https://youtube.com/@r4nesports?si=88czxlkXRpxN7RZB" target="_blank" rel="noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 15V9l5 3m8-3a24.2 24.2 0 0 1-.4 4.5c-.2 1-.8 1.7-1.7 2c-1.5.4-7.5.4-7.5.4s-6 0-7.5-.4c-.9-.3-1.5-1-1.7-2A24.2 24.2 0 0 1 2 12a24.2 24.2 0 0 1 .4-4.5c.2-1 .8-1.7 1.7-2C5.6 5 12 5 12 5s6.4 0 7.9.5c.9.3 1.5 1 1.7 2c.3 1.5.4 3 .4 4.5Z"/></svg>
+        YouTube
+      </a>
+      <a class="btn" href="mailto:r4nesports.ravyn@gmail.com">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 8v8H4V8l8 5l8-5M4 6h16l-8 5L4 6Z"/></svg>
+        Email
+      </a>
+    </div>
+  </section>
+
+  <!-- Right: Registration Form -->
+  <section class="card" aria-labelledby="reg-title">
+    <!-- ✅ Formspree connected -->
+    <form id="regForm" action="https://formspree.io/f/xjkebwkl" method="POST" novalidate>
+      <div class="form-head" style="display:flex;align-items:flex-end;justify-content:space-between;gap:10px">
+        <h2 id="reg-title" style="margin:0">Player Registration</h2>
+        <div class="mini">Nepal • 2025</div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your real name" required minlength="2" />
+        </div>
+        <div>
+          <label for="ign">In-Game Name (IGN)</label>
+          <input type="text" id="ign" name="ign" placeholder="Your IGN" required minlength="2" />
+        </div>
+
+        <div>
+          <label for="uid">Game UID</label>
+          <input type="text" id="uid" name="uid" placeholder="e.g. 1234567890" required pattern="[0-9]{4,}" />
+          <div class="hint">Numbers only</div>
+        </div>
+        <div>
+          <label for="role">Select Your Role</label>
+          <select id="role" name="role" required>
+            <option value="">Choose a role</option>
+            <option>Rusher</option>
+            <option>Support</option>
+            <option>Sniper</option>
+            <option>Bomber</option>
+            <option>Rifle</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div id="igl-wrap" class="row-2" style="display:none">
+          <label for="igl">Do you want to be an IGL?</label>
+          <select id="igl" name="igl">
+            <option value="">Choose</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="age">Your Age</label>
+          <input type="number" id="age" name="age" placeholder="Age" required min="12" max="60" />
+        </div>
+
+        <div>
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select your gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Prefer not to say</option>
+          </select>
+        </div>
+        <div>
+          <label for="whatsapp">WhatsApp Number</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="e.g. +8801XXXXXXXXX" required pattern="^[+0-9][0-9]{9,14}$" />
+          <div class="hint">Digits only, 10–15 length (country code allowed)</div>
+        </div>
+
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+
+        <!-- 🔁 CHANGED: Picture file → Link field -->
+        <div>
+          <label for="picture_link">Your Picture Link (Drive/Cloud)</label>
+          <input type="url" id="picture_link" name="picture_link" placeholder="https://drive.google.com/file/d/..." required pattern="https?://.+" />
+          <div class="hint">Make sure sharing is set to <strong>Anyone with the link → Viewer</strong>.</div>
+        </div>
+
+        <!-- 🔁 CHANGED: Gameplay video file → Link field -->
+        <div class="row-2">
+          <label for="gameplay_link">Gameplay Video Link (Role-Specific)</label>
+          <div class="note" role="note">
+            <p>Provide a <strong>2–5 minute</strong> clip (Google Drive/YouTube). Clear visuals + audible comms preferred.</p>
+          </div>
+          <input type="url" id="gameplay_link" name="gameplay_link" placeholder="https://drive.google.com/… or https://youtu.be/…" required pattern="https?://.+" />
+          <div class="hint">Ensure link is viewable without login.</div>
+        </div>
+
+        <div class="row-2">
+          <label for="reason">Why do you want to join RAVYN?</label>
+          <textarea id="reason" name="reason" placeholder="Your reason / goals" required maxlength="600"></textarea>
+          <div class="hint"><span id="chars">0</span>/600</div>
+        </div>
+
+        <div class="row-2 preview" aria-live="polite" style="display:none">
+          <div class="pholder" id="picPreview">Paste your picture link above.<br/><small>We'll show an "Open link" button here.</small></div>
+          <div class="pholder" id="vidPreview">Paste your video link above.<br/><small>We'll show an "Open link" button here.</small></div>
+        </div>
+
+        <div class="row-2">
+          <div class="progress" aria-hidden="true"><div class="bar" id="bar"></div></div>
+        </div>
+
+        <div class="row-2 actions">
+          <button type="submit" class="primary">Submit Application</button>
+          <button type="button" class="ghost" id="saveBtn">Save & Resume Later</button>
+          <a class="ghost" href="#top">Back to top ↑</a>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <p class="mini">By submitting, you agree that your information is accurate. If selected, you'll be emailed next steps in our recruitment process.</p>
+    </form>
+  </section>
+</div>
+
+<footer>© 2025 RAVYN Esports. All Rights Reserved. <span id="saveNote" aria-live="polite"></span></footer>
+
+  </div>  <script>
+    // Show/Hide IGL field based on role selection (example: show for Support/Rifle)
+    const role = document.getElementById('role');
+    const iglWrap = document.getElementById('igl-wrap');
+    role.addEventListener('change', () => {
+      const v = role.value.toLowerCase();
+      iglWrap.style.display = (v === 'support' || v === 'rifle' || v === 'other') ? 'block' : 'none';
+    });
+
+    // Char counter
+    const reason = document.getElementById('reason');
+    const chars = document.getElementById('chars');
+    reason.addEventListener('input', () => { chars.textContent = reason.value.length; });
+
+    // 🔁 CHANGED: Link previews instead of file previews
+    const picLink = document.getElementById('picture_link');
+    const vidLink = document.getElementById('gameplay_link');
+    const picPreview = document.getElementById('picPreview');
+    const vidPreview = document.getElementById('vidPreview');
+
+    function makeLinkChip(url, label){
+      return `<a href="${url}" target="_blank" rel="noopener" class="btn" style="display:inline-flex;align-items:center;gap:8px">
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10.59 13.41a1.996 1.996 0 0 1 0-2.82l3.88-3.88a2 2 0 0 1 2.83 2.83l-1.59 1.59l-1.41-1.41l1.59-1.59a.999.999 0 1 0-1.41-1.41l-3.88 3.88a.999.999 0 1 0 1.41 1.41l.88-.88l1.41 1.41l-.88.88a1.996 1.996 0 0 1-2.83 0Z"/></svg>
+                ${label}
+              </a>`;
+    }
+    function updatePreviews(){
+      const p = picLink.value.trim();
+      const v = vidLink.value.trim();
+      picPreview.innerHTML = p ? makeLinkChip(p, 'Open picture link') : 'Paste your picture link above.<br/><small>We'll show an "Open link" button here.</small>';
+      vidPreview.innerHTML = v ? makeLinkChip(v, 'Open video link') : 'Paste your video link above.<br/><small>We'll show an "Open link" button here.</small>';
+    }
+    picLink.addEventListener('input', updatePreviews);
+    vidLink.addEventListener('input', updatePreviews);
+    updatePreviews();
+
+    // ⛔️ Removed: preventDefault fake upload. Let the form submit to Formspree.
+    // Progress bar: optional little animation on click, but doesn't block submit.
+    const form = document.getElementById('regForm');
+    const bar = document.getElementById('bar');
+    form.addEventListener('submit', () => {
+      let p = 0; bar.style.width = '0%';
+      const t = setInterval(()=>{ p+=10; bar.style.width = p+'%'; if(p>=100) clearInterval(t); }, 80);
+    });
+
+    // Save & Resume Later using localStorage
+    const saveBtn = document.getElementById('saveBtn');
+    const saveNote = document.getElementById('saveNote');
+    const fields = ['name','ign','uid','role','igl','age','gender','whatsapp','email','reason','picture_link','gameplay_link'];
+
+    // Load on start
+    window.addEventListener('DOMContentLoaded', () => {
+      fields.forEach(id => {
+        const el = document.getElementById(id); if(!el) return;
+        const v = localStorage.getItem('ravyn_'+id);
+        if(v!==null){ el.value = v; }
+      });
+      saveNote.textContent = localStorage.getItem('ravyn_saved_msg') || '';
+      updatePreviews();
+    });
+
+    // Save click
+    saveBtn.addEventListener('click', () => {
+      fields.forEach(id => {
+        const el = document.getElementById(id); if(!el) return;
+        localStorage.setItem('ravyn_'+id, el.value || '');
+      });
+      localStorage.setItem('ravyn_saved_msg', '✅ Saved locally. You can resume later.');
+      saveNote.textContent = '✅ Saved locally. You can resume later.';
+    });
+  </script></body>
+</html>
